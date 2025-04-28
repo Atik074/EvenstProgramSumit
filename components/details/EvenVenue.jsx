@@ -1,4 +1,4 @@
-const EvenVenue = () => {
+const EvenVenue = ({location}) => {
     return (
         <div className="overflow-hidden rounded-lg col-span-2 bg-[#242526]">
           <div className="w-full">
@@ -8,7 +8,7 @@ const EvenVenue = () => {
               referrerPolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div className="p-4">
-            <p className="text-[#9C9C9C] text-base mt-1">Rangpur, Dhaka, Bangladesh, Rangpur, Bangladesh</p>
+            <p className="text-[#9C9C9C] text-base mt-1">{location}</p>
           </div>
         </div>
     );
