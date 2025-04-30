@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import eventLogo from "/public/logo.png"
+import SigninOut from "../auth/SigninOut";
 
 const Navbar = () => {
     return (
@@ -15,7 +16,8 @@ const Navbar = () => {
           <ul className="flex gap-4 text-[#9C9C9C]">
             <li>About</li>
             <li>Contact Us</li>
-            <li><Link href="/login">Login</Link> </li>
+            <li>  <SigninOut/> </li>
+           
           </ul>
         </div>
       </nav>

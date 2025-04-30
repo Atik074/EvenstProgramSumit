@@ -22,10 +22,10 @@ const userSchema = new Schema({
     type: String,
   },
  bio: {
-    required: false,
+    required: true,
     type: String,
   },
  
 });
 
-export const eventModel = mongoose.models.events ?? mongoose.model("events", userSchema);
+export const userModel = mongoose.models.users ?? mongoose.model("users", userSchema);

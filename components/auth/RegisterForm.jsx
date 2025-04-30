@@ -1,6 +1,8 @@
+import { registerUser } from "@/app/action";
+
 const RegisterForm = () => {
     return (
-        <form className="login-form">
+        <form className="login-form" action={registerUser}>
          
          <div className="relative w-full">
           <label htmlFor="name">Full name</label>
