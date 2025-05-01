@@ -30,7 +30,9 @@ const EventCard = ({event}) => {
        
           <div className="w-full flex gap-4 mt-4">
        
-          <ActionButton/>
+          <ActionButton 
+           eventId={id} 
+           interestedUserIds={ interested_ids}/>
           </div>
         </div>
       </div>
