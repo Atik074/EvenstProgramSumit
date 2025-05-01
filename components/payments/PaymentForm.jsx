@@ -1,4 +1,4 @@
-const PaymentForm = () => {
+const PaymentForm = ({eventId}) => {
     return (
         <form>
         <div className="my-4 space-y-2">

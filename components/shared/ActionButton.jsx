@@ -24,7 +24,7 @@ const ActionButton = ({eventId , interestedUserIds ,formDetails}) => {
 
   const markGoing =()=>{
     if(auth){
-      router.push('/payment')
+      router.push(`/payment/${eventId}`)
     }else{
       router.push("/login")
     }
