@@ -1,6 +1,11 @@
+"use client"
+import { addGoingEvent } from "@/app/action";
+import useAuth from "@/app/hooks/useAuth";
+
 const PaymentForm = ({eventId}) => {
+  const {auth} = useAuth()
     return (
-        <form>
+        <form action={()=>addGoingEvent(eventId ,auth)}>
         <div className="my-4 space-y-2">
           <label htmlFor="name" className="block">Name</label>
           <input type="text" id="name" className="w-full bg-[#27292F] border border-[#CCCCCC]/20 py-1 px-2 rounded-md" />

@@ -27,8 +27,8 @@ alt="Event 1" className=" mx-auto" />
           <ActionButton 
           
            eventId={eventInfo?.id} 
-
            interestedUserIds={eventInfo?.interested_ids}
+           going_ids={eventInfo?.going_ids}
              formDetails={true}/>
      
       </div>

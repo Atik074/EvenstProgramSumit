@@ -3,7 +3,7 @@ import { AuthContext } from "../contexts";
 
 
 export default function useAuth() {
-  const {auth , setAuth} = useContext(AuthContext)
+  const {auth , setAuth} =useContext(AuthContext)
 
   return {auth , setAuth} 
 }
