@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ActionButton from "../shared/ActionButton";
 import eventIo from "/public/google-io-2023-1.png"
+import EventSchema from "../meta/EventSchema";
 
 
 const EventCard = ({event}) => {
@@ -15,6 +16,9 @@ const EventCard = ({event}) => {
 } = event
     return (
         <div className="overflow-hidden rounded-md bg-[#242526]">
+     
+       <EventSchema event={event}/>
+
         <Image src={ imageUrl} width={500}
         height={500} alt="Event 1"/>
 
@@ -32,7 +36,7 @@ const EventCard = ({event}) => {
        
           <ActionButton 
            eventId={id} 
-           interestedUserIds={ interested_ids}
+           interestedUserIds={interested_ids}
            goingUserIds={going_ids}
            />
           </div>

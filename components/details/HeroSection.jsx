@@ -1,14 +1,21 @@
 import Image from "next/image";
 import ActionButton from "../shared/ActionButton";
+import { generateBlurImg } from "@/utils/getBlurImg";
 
-const HeroSection = ({eventInfo}) => {
-    return (
-        <section className="container">
+const HeroSection = async({ eventInfo }) => {
+  const {base64} =await generateBlurImg(eventInfo?.imageUrl)
+  return (
+    <section className="container">
       <div className="bg-gradient-to-b from-slate-200/20 to-slate-800/30">
         <Image
-         src={eventInfo?.imageUrl} 
-width={500} height={500} 
-alt="Event 1" className=" mx-auto" />
+          src={eventInfo?.imageUrl}
+          width={500}
+          height={500}
+          alt="Event 1"
+          className=" mx-auto"
+          placeholder="blur"
+          blurDataURL={base64}
+        />
       </div>
 
       {/* <!-- Details --> */}
@@ -23,17 +30,15 @@ alt="Event 1" className=" mx-auto" />
           </div>
         </div>
 
-       
-          <ActionButton 
-          
-           eventId={eventInfo?.id} 
-           interestedUserIds={eventInfo?.interested_ids}
-           going_ids={eventInfo?.going_ids}
-             formDetails={true}/>
-     
+        <ActionButton
+          eventId={eventInfo?.id}
+          interestedUserIds={eventInfo?.interested_ids}
+          going_ids={eventInfo?.going_ids}
+          formDetails={true}
+        />
       </div>
     </section>
-    );
+  );
 };
 
 export default HeroSection;

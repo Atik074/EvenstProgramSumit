@@ -7,8 +7,8 @@ import { useState, useTransition } from "react";
 const ActionButton = ({eventId , interestedUserIds,goingUserIds, formDetails}) => {
   const {auth} = useAuth()
 
-  const isInterested = interestedUserIds.find(id => id === auth?.id)
-  const isGoing = goingUserIds.find(id => id === auth?.id)
+  const isInterested = interestedUserIds.find((id) => id === auth?.id)
+  const isGoing =goingUserIds?.find((id) => id === auth?.id);
 
 
   const [interested , setInterested] = useState(isInterested)
